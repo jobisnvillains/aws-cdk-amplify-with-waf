@@ -180,7 +180,7 @@ class CustomAmplifyDistributionStack(Stack):
                     http_status=403,
                     response_page_path='/index.html',
                     response_http_status=200,
-                    ttl=cdk.Duration.minutes(1)
+                    ttl=Duration.minutes(1)
                 )
             ]
         )
