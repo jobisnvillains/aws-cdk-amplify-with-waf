@@ -175,6 +175,14 @@ class CustomAmplifyDistributionStack(Stack):
             ],
             price_class=cloudfront.PriceClass.PRICE_CLASS_ALL,
             web_acl_id=web_acl_arn,
+            error_responses=[
+                cloudfront.ErrorResponse(
+                    http_status=403,
+                    response_page_path='/index.html',
+                    response_http_status=200,
+                    ttl=10
+                )
+            ]
         )
 
         amplify_app_distribution.node.add_dependency(amplify_auth_value)
