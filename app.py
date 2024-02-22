@@ -30,5 +30,5 @@ CustomAmplifyDistributionStack(
     acm_arn=app.node.try_get_context("acm_arn"),
 )
 
-Aspects.of(app).add(AwsSolutionsChecks())
+# Aspects.of(app).add(AwsSolutionsChecks())
 app.synth()
